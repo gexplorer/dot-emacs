@@ -1,0 +1,13 @@
+/.cache/
+*.elc
+/elpa/
+/server/
+/recentf
+/bookmarks
+/.lsp-session-v1
+/.org-id-locations
+/elgrep-data.el
+/projectile-bookmarks.eld
+/auto-save-list/
+/transient/
+/url/
