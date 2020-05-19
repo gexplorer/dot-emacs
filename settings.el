@@ -223,7 +223,6 @@
  '(org-agenda-todo-ignore-with-date t)
  '(org-babel-load-languages (quote ((emacs-lisp . t) (shell . t) (sql . t))))
  '(org-blank-before-new-entry (quote ((heading . auto) (plain-list-item . auto))))
- '(org-bullets-bullet-list (quote ("●" "○" "○" "○" "○" "○" "○" "○")))
  '(org-capture-templates
    (quote
     (("w" "Work" entry

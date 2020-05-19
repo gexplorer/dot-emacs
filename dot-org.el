@@ -121,11 +121,10 @@
 
 (use-package org-bullets
   :ensure
-  :disabled
   :delight
   :hook (org-mode . org-bullets-mode)
   :custom
-  (org-bullets-bullet-list '("●" "○" "○" "○" "○" "○" "○" "○")))
+  (org-bullets-bullet-list '("•" "◦" "◦" "◦" "◦" "◦" "◦" "◦")))
 
 (use-package org-superstar
   :ensure
