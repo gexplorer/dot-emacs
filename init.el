@@ -87,7 +87,7 @@
   :after hydra
   :custom-face
   (default ((t (:family "Iosevka" :height 108))))
-  (variable-pitch ((t (:family "Roboto" :height 108))))
+  (variable-pitch ((t (:family "Inter" :height 112))))
   (fixed-pitch ((t (:family "Iosevka" :height 108))))
   (fixed-pitch-serif ((t (:family "Iosevka Etoile" :height 108))))
   :bind (("M-g" . hydra-goto/body))
