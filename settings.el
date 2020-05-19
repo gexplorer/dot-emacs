@@ -37,6 +37,7 @@
  '(delete-selection-mode t)
  '(diff-hl-side (quote right))
  '(directory-abbrev-alist nil)
+ '(dired-listing-switches "-alh")
  '(display-line-numbers nil)
  '(doc-view-ghostscript-program "c:/Program Files/gs/gs9.23/bin/gswin64.exe")
  '(dynamic-completion-mode nil)
