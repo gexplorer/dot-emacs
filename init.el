@@ -79,7 +79,7 @@
 (use-package solarized-theme
   :demand t
   :config
-  (load-theme 'solarized-light)
+  (load-theme 'solarized-dark)
   :custom
   (solarized-scale-org-headlines nil)
   (solarized-use-variable-pitch nil))
