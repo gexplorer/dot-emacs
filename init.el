@@ -241,19 +241,27 @@
       (ibuffer-do-sort-by-alphabetic)))
   :hook (ibuffer . my-ibuffer-vc-setup))
 
-(use-package projectile
-  :delight '(:eval
-             (if (projectile-project-p)
-                 (format " [%s]" (projectile-project-name))))
-  :commands projectile-mode
-  :bind-keymap (("C-c p" . projectile-command-map)
-                ("C-c C-p" . projectile-command-map))
-  :commands projectile-project-name
+(use-package project
+  :ensure nil
+  :functions project-root
+  :bind-keymap (("C-c p" . project-prefix-map))
+  :preface
+  (defun project-magit-dir ()
+    "Run `magit-status' in the current project's root."
+    (interactive)
+    (magit-status-setup-buffer (project-root (project-current t))))
+  (defun project-term-dir ()
+    "Run `vterm' in the current project's root."
+    (interactive)
+    (vterm))
   :custom
-  (projectile-completion-system 'ivy)
-  (projectile-indexing-method 'alien)
-  :init
-  (projectile-mode))
+  (project-switch-commands
+   '((project-find-file "Find file")
+     (project-find-regexp "Find regexp")
+     (project-dired "Dired")
+     (project-magit-dir "Magit" ?m)
+     (project-term-dir "VTerm" ?t)
+     (project-eshell "Eshell"))))
 
 (use-package ag
   :commands ag)
