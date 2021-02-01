@@ -68,12 +68,6 @@
 (setq custom-file (emacs-path "settings.el"))
 (load custom-file)
 
-(use-package gx-utils
-  :load-path "../Projects/gx-utils"
-  :commands (gx-convert-image-to-base64
-             gx-tangle-dotemacs
-             gx-eshell-new))
-
 (use-package emacs
   :delight (buffer-face-mode nil face-remap)
   :custom-face
