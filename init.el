@@ -272,13 +272,12 @@
   (defun gx-flycheck-add-next-checker (checker next)
     "Add NEXT checker after CHECKER if it's not already next."
     (unless (member next (flycheck-get-next-checkers checker))
-      (flycheck-add-next-checker checker next)))
+      (flycheck-add-next-checker checker (cons t next))))
   
   (defun my-flycheck-setup ()
     "My flycheck setup."
     (interactive)
     (gx-flycheck-add-next-checker 'lsp 'javascript-eslint)
-    (gx-flycheck-add-next-checker 'lsp 'typescript-tslint)
     (gx-flycheck-add-next-checker 'lsp 'scss-stylelint))
   :hook ((prog-mode . flycheck-mode)
          (lsp-after-initialize . my-flycheck-setup)))
