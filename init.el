@@ -79,9 +79,8 @@
   (fixed-pitch-serif ((t (:family "Iosevka Etoile" :height 120)))))
 
 (use-package solarized-theme
-  :demand t
   :config
-  (load-theme 'solarized-dark)
+  (load-theme 'solarized-light)
   :custom
   (solarized-scale-org-headlines nil)
   (solarized-use-variable-pitch nil))
