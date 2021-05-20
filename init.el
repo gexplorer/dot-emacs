@@ -195,29 +195,6 @@
   (epe-venv-face ((t (:inherit font-lock-comment-face))))
   (epe-git-dir-face ((t (:inherit font-lock-type-face)))))
 
-(use-package vterm
-  :bind (:map vterm-mode-map
-              ("C-c C-t" . vterm-copy-mode)
-              ("C-c C-l" . vterm-clear-scrollback)
-              ("C-c C-c" . vterm-send-C-c))
-  :custom-face
-  (vterm-color-white ((t (:inherit term-color-white
-                                   :foreground "white"
-                                   :background "white"))))
-  (vterm-color-black ((t (:inherit term-color-black
-                                   :foreground ,(face-foreground 'default)
-                                   :background ,(face-foreground 'default))))))
-
-(use-package multi-vterm
-  :after vterm
-  :bind (("<f12>" . multi-vterm)
-         ("M-<f12>" . multi-vterm-dedicated-toggle)
-         ("C-<f12>" . multi-vterm-project))
-  :bind (:map vterm-mode-map
-              ("C-x ," . multi-vterm-rename-buffer))
-  :custom
-  (multi-vterm-buffer-name "vterm"))
-
 (use-package ibuffer
   :bind ("C-x C-b" . ibuffer)
   :custom
@@ -250,17 +227,12 @@
     "Run `magit-status' in the current project's root."
     (interactive)
     (magit-status-setup-buffer (project-root (project-current t))))
-  (defun project-term-dir ()
-    "Run `vterm' in the current project's root."
-    (interactive)
-    (vterm))
   :custom
   (project-switch-commands
    '((project-find-file "Find file")
      (project-find-regexp "Find regexp")
      (project-dired "Dired")
      (project-magit-dir "Magit" ?m)
-     (project-term-dir "VTerm" ?t)
      (project-eshell "Eshell"))))
 
 (use-package ag
