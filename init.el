@@ -242,10 +242,14 @@
   :commands (yas-minor-mode))
 
 (use-package company
+  :disabled
   :delight
   :hook (after-init . global-company-mode)
-  :bind (("C-M-i" . company-complete)
-         ([remap completion-at-point]   . company-complete))
+  :commands (company-complete)
+  :bind ((:map company-mode-map
+               ("C-M-i" . company-complete))
+         ([remap completion-at-point]   . company-complete)
+         ([remap ispell-complete-word]   . company-complete))
   :custom
   (company-minimum-prefix-length 3)
   (company-tooltip-align-annotations t)
