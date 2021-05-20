@@ -541,7 +541,14 @@
   (js2r-always-insert-parens-around-arrow-function-params t)
   (js2r-prefer-let-over-var t))
 
-(use-package vue-mode
+(use-package polymode
+  :defer)
+
+(use-package sfc-mode
+  :load-path "~/Projects/sfc-mode"
+  :commands sfc-mode
+  :bind (:map sfc-mode-map
+              ("C-M-i" . complete-symbol))
   :mode "\\.vue\\'")
 
 (use-package json-mode
