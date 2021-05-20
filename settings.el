@@ -41,7 +41,7 @@
  '(mode-line-default-help-echo nil)
  '(overflow-newline-into-fringe t)
  '(package-selected-packages
-   '(ace-window add-node-modules-path ag cask-mode company counsel counsel-ag-popup crux csv-mode delight docker dockerfile-mode eshell-prompt-extras expand-region feature-mode flycheck flycheck-indicator flycheck-package flycheck-pos-tip graphviz-dot-mode handlebars-mode ibuffer-vc ivy js2-mode js2-refactor json-mode lsp-mode magit mermaid-mode mocha-snippets move-text multi-vterm multiple-cursors ob-http olivetti org-super-agenda org-superstar ox-reveal powershell pug-mode rainbow-delimiters restclient simple-modeline ssh-config-mode string-inflection stylus-mode swiper typescript-mode undo-tree vterm vue-mode web-mode wgrep which-key yaml-mode yasnippet ))
+   '(solarized-theme use-package flycheck-posframe flycheck-inlin el-mock company polymode web-mode lsp-ui rjsx-mode ace-window add-node-modules-path ag cask-mode counsel counsel-ag-popup crux csv-mode delight docker dockerfile-mode eshell-prompt-extras expand-region feature-mode flycheck flycheck-indicator flycheck-package graphviz-dot-mode handlebars-mode ibuffer-vc ivy js2-mode js2-refactor json-mode lsp-mode magit mermaid-mode mocha-snippets move-text multiple-cursors ob-http olivetti org-super-agenda org-superstar ox-reveal powershell pug-mode rainbow-delimiters restclient simple-modeline ssh-config-mode string-inflection stylus-mode swiper typescript-mode undo-tree vue-mode wgrep which-key yaml-mode yasnippet))
  '(ring-bell-function 'ignore)
  '(rm-whitelist "FlyC")
  '(selective-display-ellipses t)
