@@ -603,6 +603,12 @@
   (web-mode-enable-engine-detection t)
   (web-mode-enable-html-entities-fontification t))
 
+(use-package html-mode
+  :ensure nil
+  :commands html-mode
+  :bind ((:map html-mode-map
+               ("C-M-i" . completion-at-point))))
+
 (use-package handlebars-mode
   :delight "hbs"
   :mode "\\.hbs\\'")
