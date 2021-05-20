@@ -366,6 +366,7 @@
   :custom
   (ivy-height 20)
   (ivy-use-virtual-buffers t)
+  (ivy-case-fold-search-default t)
   :custom-face
   (ivy-virtual ((t (:inherit font-lock-comment-face))))
   (ivy-org ((t (:inherit font-lock-doc-face)))))
