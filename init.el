@@ -468,9 +468,7 @@
          (lsp-mode . lsp-enable-which-key-integration))
   :commands lsp
   :custom
-  (lsp-ui-doc-enable nil)
-  (lsp-headerline-breadcrumb-enable nil)
-  (lsp-ui-sideline-enable nil)
+  (lsp-headerline-breadcrumb-enable t)
   (lsp-auto-configure t)
   (lsp-auto-guess-root t)
   (lsp-flycheck-live-reporting t)
@@ -478,7 +476,48 @@
   (lsp-imenu-show-container-name nil)
   (lsp-prefer-flymake nil)
   (lsp-signature-render-all nil)
-  (lsp-symbol-highlighting-skip-current nil))
+  (lsp-symbol-highlighting-skip-current nil)
+  (lsp-vetur-format-options-tab-size 4)
+  (lsp-vetur-experimental-template-interpolation-service t)
+  :custom-face
+  `@(lsp-headerline-breadcrumb-path-face ((t (:inherit (font-lock-variable-name-face)))))
+  `@(lsp-headerline-breadcrumb-path-error-face ((t :underline (:style wave :color ,(face-foreground 'error))
+                                                   :inherit lsp-headerline-breadcrumb-path-face)))
+  `@(lsp-headerline-breadcrumb-path-warning-face ((t :underline (:style wave :color ,(face-foreground 'warning))
+                                                     :inherit lsp-headerline-breadcrumb-path-face)))
+  `@(lsp-headerline-breadcrumb-path-info-face ((t :underline (:style wave :color ,(face-foreground 'font-lock-variable-name-face))
+                                                  :inherit lsp-headerline-breadcrumb-path-face)))
+  `@(lsp-headerline-breadcrumb-path-hint-face ((t :underline (:style wave :color ,(face-foreground 'font-lock-doc-face))
+                                                  :inherit lsp-headerline-breadcrumb-path-face)))
+  `@(lsp-headerline-breadcrumb-symbols-face ((t (:inherit (font-lock-doc-face)))))
+  `@(lsp-headerline-breadcrumb-symbols-error-face ((t :underline (:style wave :color ,(face-foreground 'error))
+                                                      :inherit lsp-headerline-breadcrumb-symbols-face)))
+  `@(lsp-headerline-breadcrumb-symbols-warning-face ((t :underline (:style wave :color ,(face-foreground 'warning))
+                                                        :inherit lsp-headerline-breadcrumb-symbols-face)))
+  `@(lsp-headerline-breadcrumb-symbols-info-face ((t :underline (:style wave :color ,(face-foreground 'font-lock-variable-name-face))
+                                                     :inherit lsp-headerline-breadcrumb-symbols-face)))
+  `@(lsp-headerline-breadcrumb-symbols-hint-face ((t :underline (:style wave :color ,(face-foreground 'font-lock-doc-face))
+                                                     :inherit lsp-headerline-breadcrumb-symbols-face))))
+
+(use-package lsp-ui
+  :after lsp-mode
+  :hook (lsp-mode . lsp-ui-mode)
+  :bind ("<f2>" . lsp-ui-flycheck-list)
+  :custom
+  (lsp-eldoc-enable-hover nil)
+  (lsp-ui-doc-enable t)
+  (lsp-ui-sideline-enable nil)
+  (lsp-ui-imenu-enable nil)
+  (lsp-ui-sideline-enable nil)
+  (lsp-ui-doc-border "red")
+  (lsp-ui-doc-use-webkit nil)
+  (lsp-ui-doc-delay 1.0)
+  (lsp-ui-doc-use-childframe t)
+  (lsp-ui-doc-header t)
+  (lsp-ui-doc-include-signature t)
+  (lsp-ui-doc-max-height 24)
+  :custom-face
+  `@(lsp-ui-doc-background ((t (:background ,(face-background 'highlight))))))
 
 (use-package lisp-mode
   :ensure nil
