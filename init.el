@@ -149,7 +149,7 @@
 (use-package dired
   :ensure nil
   :custom
-  (dired-listing-switches "-alh --group-directories-first"))
+  (dired-listing-switches "-alh"))
 
 (use-package magit
   :bind (("C-x g" . magit-status)
