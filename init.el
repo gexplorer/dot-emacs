@@ -109,18 +109,6 @@
   :hook ((org-mode . (lambda () (toggle-truncate-lines -1)))
          (markdown-mode . (lambda () (toggle-truncate-lines -1)))))
 
-(use-package ligature
-  :load-path "~/Projects/ligature"
-  :commands ligature-set-ligatures
-  :hook (after-init . global-ligature-mode)
-  :config
-  (ligature-set-ligatures
-   'prog-mode
-   '("<---" "<--"  "<<-" "<-" "->" "-->" "--->" "<->" "<-->" "<--->" "<---->" "<!--"
-     "<==" "<===" "<=" "=>" "=>>" "==>" "===>" ">=" "<=>" "<==>" "<===>" "<====>" "<!---"
-     "<~~" "<~" "~>" "~~>" "::" ":::" "==" "!=" "===" "!=="
-     ":=" ":-" ":+" "<*" "<*>" "*>" "<|" "<|>" "|>" "+:" "-:" "=:" "<******>" "++" "+++")))
-
 (use-package hl-line
   :hook (prog-mode . hl-line-mode))
 
