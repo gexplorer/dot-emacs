@@ -666,6 +666,9 @@
 (use-package csv-mode
   :mode ("\\.csv\\'" . csv-mode))
 
+(use-package el-mock
+  :defer)
+
 (use-package ssh-config-mode
   :mode (("/\\.ssh/config\\'" . ssh-config-mode)
          ("/sshd?_config\\'" . ssh-config-mode)
