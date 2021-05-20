@@ -283,8 +283,27 @@
          (lsp-after-initialize . my-flycheck-setup)))
 
 (use-package flycheck-pos-tip
+  :disabled
   :after flycheck
   :hook (flycheck-mode . flycheck-pos-tip-mode))
+
+(use-package flycheck-posframe
+  :after flycheck
+  :hook (flycheck-mode . flycheck-posframe-mode)
+  :custom
+  (flycheck-posframe-prefix "● ")
+  (flycheck-posframe-info-prefix "● ")
+  (flycheck-posframe-warning-prefix "▲ ")
+  (flycheck-posframe-error-prefix "■ ")
+  (flycheck-posframe-position 'point-bottom-left-corner)
+  (flycheck-posframe-border-width 1)
+  :custom-face
+  (flycheck-posframe-face ((t (:height 0.9))))
+  (flycheck-posframe-background-face ((t (:inherit (highlight)))))
+  (flycheck-posframe-border-face ((t (:inherit (font-lock-comment-face)))))
+  (flycheck-posframe-warning-face ((t (:inherit (compilation-warning flycheck-posframe-face)))))
+  (flycheck-posframe-error-face ((t (:inherit (compilation-error flycheck-posframe-face)))))
+  (flycheck-posframe-info-face ((t (:inherit (compilation-info flycheck-posframe-face))))))
 
 (use-package flycheck-indicator
   :after flycheck
