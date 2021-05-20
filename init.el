@@ -1,3 +1,5 @@
+(setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin"))
+(setq exec-path (append exec-path '("/usr/local/bin")))
 (defvar file-name-handler-alist-old file-name-handler-alist)
 
 (setq package-enable-at-startup nil
