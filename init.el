@@ -73,7 +73,7 @@
 (use-package emacs
   :delight (buffer-face-mode nil face-remap)
   :custom-face
-  (default ((t (:family "Iosevka" :height 120))))
+  (default ((t (:family "Iosevka" :height 140))))
   (variable-pitch ((t (:family "Fira Sans" :height 116 :weight semi-light))))
   (fixed-pitch ((t (:family "Iosevka" :height 120))))
   (fixed-pitch-serif ((t (:family "Iosevka Etoile" :height 120)))))
