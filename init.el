@@ -598,21 +598,8 @@
 
 (use-package web-mode
   :mode "\\.html\\'"
-  :commands web-mode-set-content-type
-  :preface
-  (defun my-web-mode-setup ()
-    (if (equal web-mode-content-type "javascript")
-        (web-mode-set-content-type "jsx")
-      (message "now set to: %s" web-mode-content-type)))
-  :hook (web-mode . my-web-mode-setup)
   :custom
   (web-mode-auto-close-style 1)
-  (web-mode-enable-block-face nil)
-  (web-mode-enable-css-colorization nil)
-  (web-mode-enable-current-column-highlight nil)
-  (web-mode-enable-current-element-highlight nil)
-  (web-mode-enable-element-content-fontification nil)
-  (web-mode-enable-element-tag-fontification nil)
   (web-mode-enable-engine-detection t)
   (web-mode-enable-html-entities-fontification t))
 
