@@ -511,6 +511,9 @@
   (js2-mode-show-parse-errors t)
   (js2-mode-show-strict-warnings t))
 
+(use-package rjsx-mode
+  :magic "import React\\_>")
+
 (use-package typescript-mode
   :delight "ts"
   :mode "\\.ts\\'"
