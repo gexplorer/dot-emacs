@@ -239,7 +239,7 @@
 
 (use-package yasnippet
   :delight yas-minor-mode
-  :commands (yas-minor-mode))
+  :hook (prog-mode . yas-minor-mode))
 
 (use-package company
   :disabled
