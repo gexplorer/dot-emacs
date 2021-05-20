@@ -369,7 +369,10 @@
   (ivy-case-fold-search-default t)
   :custom-face
   (ivy-virtual ((t (:inherit font-lock-comment-face))))
-  (ivy-org ((t (:inherit font-lock-doc-face)))))
+  (ivy-org ((t (:inherit font-lock-doc-face))))
+  (ivy-current-match ((t (:weight normal :underline
+                                  (:color foreground-color :style line)
+                                  :extend t :inherit (highlight))))))
 
 (use-package ivy-rich
   :disabled
