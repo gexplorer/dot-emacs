@@ -452,9 +452,10 @@
   (counsel-mode-override-describe-bindings t)
   (counsel-org-headline-display-priority nil))
 
-(use-package counsel-ag-popup
+(use-package counsel-popup
+  :load-path "~/Projects/counsel-popup"
   :after counsel
-  :bind ("C-c s" . counsel-ag-popup))
+  :bind ("C-c s" . counsel-popup-rg))
 
 (use-package lsp-mode
   :delight
