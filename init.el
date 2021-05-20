@@ -72,6 +72,7 @@
 
 (use-package emacs
   :delight (buffer-face-mode nil face-remap)
+  :bind (([remap ispell-complete-word] . completion-at-point))
   :custom-face
   (default ((t (:family "Iosevka" :height 140))))
   (variable-pitch ((t (:family "Fira Sans" :height 116 :weight semi-light))))
