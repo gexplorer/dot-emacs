@@ -682,3 +682,6 @@
          ("/sshd?_config\\'" . ssh-config-mode)
          ("/known_hosts\\'" . ssh-known-hosts-mode)
          ("/authorized_keys\\'" . ssh-authorized-keys-mode)))
+
+(use-package marginalia
+  :hook (after-init . marginalia-mode))
